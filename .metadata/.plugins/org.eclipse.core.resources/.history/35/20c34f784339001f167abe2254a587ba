@@ -1,0 +1,19 @@
+package model;
+
+public class userDAO {
+	private user user;
+	
+   //Para realizar operaciones
+	public userDAO(model.user user) {
+		super();
+		this.user = user;
+	}
+
+	//Se lo utilizara para realizar consultas
+	public userDAO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+}

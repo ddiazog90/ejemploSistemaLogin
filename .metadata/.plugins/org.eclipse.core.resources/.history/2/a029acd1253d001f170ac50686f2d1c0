@@ -1,0 +1,16 @@
+package model;
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		userDAO udao=new userDAO(new user("ptorres@ups.edu.ec","ptorres1234",1));
+		if(udao.updateUser(1)) {
+			System.out.println("Usuario registrado");
+		}
+		
+		
+	}
+
+}

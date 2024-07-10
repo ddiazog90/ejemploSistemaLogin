@@ -1,0 +1,42 @@
+package controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import model.user;
+import view.view_login;
+
+public class logic_view_login implements ActionListener,parametrizable{
+	
+	private view_login vl;
+
+	public logic_view_login(view_login vl) {
+		super();
+		this.vl = vl;
+		this.vl.btn_login.addActionListener(this);//
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==vl.btn_login) {
+			try {
+				List<user> users=udao.loadAllUsers();
+				for(user u:users) {
+					//validar
+				}
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				JOptionPane.showMessageDialog(vl, "Error al cargar Users");
+			}
+		}
+	}
+	
+	
+
+}

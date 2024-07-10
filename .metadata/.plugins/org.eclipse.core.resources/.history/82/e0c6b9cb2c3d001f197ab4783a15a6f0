@@ -1,0 +1,8 @@
+package controller;
+
+import model.userDAO;
+
+public interface parametrizable {
+	public final userDAO udao=new userDAO();//Permite acceder al DAO de user
+
+}

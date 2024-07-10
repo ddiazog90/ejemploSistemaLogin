@@ -1,0 +1,18 @@
+package controller;
+
+import model.userDAO;
+import model.user;
+
+public interface parametrizable {
+	public final userDAO udao=new userDAO();//Permite acceder al DAO de user
+	public final user user=new user();//Para crear una variable de session
+	//permite construir una cadena de caracteres
+	public default String getWord(char [] c) {
+		String word="";
+		for(char cr:c) {
+			word+=String.valueOf(cr);
+		}
+		return word;
+	}
+
+}
